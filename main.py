@@ -10,11 +10,11 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
 
-@dp.message_handler()
+@dp.message_handler(commands=['hey'])
 async def echo(message: Message):
     await message.answer(message.text)
 
 
 if __name__ == '__main__':
-    executor.start_polling(dp )
+    executor.start_polling(dp, skip_updates=True)
 
