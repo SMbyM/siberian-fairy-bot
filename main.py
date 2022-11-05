@@ -12,7 +12,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['hey'])
 async def echo(message: Message):
-    await message.answer(message.text)
+    await message.reply(message.text)
 
 
 if __name__ == '__main__':
