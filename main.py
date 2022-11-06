@@ -6,11 +6,11 @@ from aiogram.utils import executor
 from config import TOKEN
 
 
-bot = Bot(token='5757913178:AAFenicSGytVqJ5zzY1n3GAXs7Y0tKlMZ1o')
+bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
 
-@dp.message_handler(commands=['hey'])
+@dp.message_handler()
 async def echo(message: Message):
     await message.reply(message.text)
 
