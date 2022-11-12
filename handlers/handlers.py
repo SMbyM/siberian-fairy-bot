@@ -19,3 +19,8 @@ async def amount(msg: Message):
     await msg.answer(get_amount(msg.from_user.id))
 
 
+@dp.message_handler(commands=['id'])
+async def id(msg: Message):
+    await msg.answer(msg.from_user.id)
+
+
