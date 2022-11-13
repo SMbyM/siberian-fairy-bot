@@ -25,6 +25,14 @@ def get_amount(user_id: int) -> int:
     )[0][0]
 
 
+def get_admins() -> list:
+    return execute_query(
+        'select user_id from `users` where role = \'admin\''
+        (),
+        'list'
+    )
+
+
 def pay(user_id: int, price: int) -> str:
     amount = get_amount()
 
